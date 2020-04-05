@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-const globalStyles = StyleSheet.create({
+export const globalStyles = StyleSheet.create({
     container: {
         padding: 20,
         flex: 1
@@ -15,4 +15,12 @@ const globalStyles = StyleSheet.create({
     }
 })
 
-export default globalStyles;
+export const defaultHeaderOptions = {
+
+    headerStyle: {
+        backgroundColor: '#33a6f2',
+    },
+    headerTintColor: "#fff",
+}
+
+
