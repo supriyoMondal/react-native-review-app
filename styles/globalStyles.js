@@ -16,11 +16,11 @@ export const globalStyles = StyleSheet.create({
 })
 
 export const defaultHeaderOptions = {
-
     headerStyle: {
-        backgroundColor: '#33a6f2',
+        backgroundColor: '#eee',
+        height: 70
     },
-    headerTintColor: "#fff",
+    headerTintColor: "#444",
 }
 
 
