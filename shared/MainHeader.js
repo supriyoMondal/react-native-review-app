@@ -1,16 +1,13 @@
 import React from 'react'
-import { StyleSheet, Text, View, Dimensions } from 'react-native'
+import { StyleSheet, Text, View, Dimensions, Image, ImageBackground } from 'react-native'
 import { MaterialIcons } from '@expo/vector-icons'
-
-
-
 
 const MainHeader = ({ navigation, title }) => {
     const toggleMenu = () => {
         navigation.openDrawer();
     }
     return (
-        <View style={styles.header}>
+        <ImageBackground source={require('../assets/game_bg.png')} style={styles.header}>
 
             <MaterialIcons
                 onPress={() => toggleMenu()}
@@ -18,10 +15,11 @@ const MainHeader = ({ navigation, title }) => {
 
                 style={styles.icon} />
 
-            <View>
+            <View style={styles.headerTitle}>
+                <Image source={require('../assets/heart_logo.png')} style={styles.headerImage} />
                 <Text style={styles.headerText}>{title}</Text>
             </View>
-        </View>
+        </ImageBackground>
     )
 }
 
@@ -30,6 +28,7 @@ export default MainHeader
 const styles = StyleSheet.create({
     header: {
         width: Dimensions.get('screen').width,
+        height: 50,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center'
@@ -43,5 +42,13 @@ const styles = StyleSheet.create({
     icon: {
         position: 'absolute',
         left: 13
+    },
+    headerImage: {
+        width: 26,
+        height: 26,
+        marginHorizontal: 5
+    },
+    headerTitle: {
+        flexDirection: 'row'
     }
 })
